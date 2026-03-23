@@ -1,30 +1,16 @@
-const http = require('http');
+const express = require('express');
+const app = express();
+const articlesRouter = require('./routes/articles');
 
-const data = JSON.stringify({
-  titre: "Mon premier article",
-  contenu: "La cuisine, ma passion",
-  auteur: "Audrey",
-  date: "2026-03-22",
-  categorie: "Cuisine",
-  tags: "cuisine,tv"
+app.use(express.json());
+
+app.use('/api/articles', articlesRouter);
+
+app.get('/', (req, res) => {
+  res.json({ message: 'Youpi mon API Blog est operationnelle !' });
 });
 
-const options = {
-  hostname: 'localhost',
-  port: 3000,
-  path: '/api/articles',
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    'Content-Length': data.length
-  }
-};
-
-const req = http.request(options, function(res) {
-  let body = '';
-  res.on('data', function(chunk) { body += chunk; });
-  res.on('end', function() { console.log('Reponse:', body); });
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Serveur demarre sur http://localhost:${PORT}`);
 });
-
-req.write(data);
-req.end();

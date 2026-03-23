@@ -9,6 +9,10 @@ Quand on commence a zero, chaque ligne de code est une victoire.
 **Université de Yaoundé I** • Licence 2 Informatique • INF222 EC1 • 2025/2026
 
 ---
+##  API en ligne
+
+My first API REST est déployée et accessible ici :  
+ **https://inf222-taf1-blog-api.onrender.com**
 
 ##  Fonctionnalités
 
@@ -195,7 +199,7 @@ Recherche dans le **titre** et le **contenu** des articles.
 
 ---
 
-## 🏗 Architecture MVC
+##  Architecture MVC
 ```
 Requête HTTP
      ↓
@@ -212,9 +216,10 @@ Réponse JSON
 
 ---
 
-## 👩🏾‍ Auteure
+##  Auteure
 
-**SIEWE SANTHE AUDREY CAMILA**  
+**SIEWE SANTHE AUDREY CAMILA** 
+**MATRICULE: 24G2854** 
 Licence 2 Informatique — Systèmes et Réseaux  
 Université de Yaoundé I, Cameroun  
 UE INF222 EC1 — Développement Backend  
